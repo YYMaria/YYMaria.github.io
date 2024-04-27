@@ -104,10 +104,6 @@ nav{
     flex-wrap: wrap;
 }
 
-.logo{
-    width: 140px;
-}
-
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -133,6 +129,11 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+.logo{
+    width: 140px;
+}
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
@@ -144,7 +145,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #DA8DFF;
 }
-/* -----------about--------------- */
+/*about*/
 #about{
     padding: 80px 0;
     color: rgb(246, 227, 254);
@@ -164,12 +165,6 @@ nav ul li a:hover::after{
 }
 .about-col-2{
     flex-basis: 60%;
-}
-
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
 }
 
 .tab-titles{
@@ -212,7 +207,14 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
-/* -------portfolio----------- */
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/*portfolio*/
 #portfolio{
     padding: 30px 0;
     background-image: url(images/background.png)
