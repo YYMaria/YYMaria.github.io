@@ -116,7 +116,7 @@ nav ul li a{
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+nav ul li a:after{
     content: '';
     width: 0;
     height: 3px;
@@ -157,14 +157,14 @@ nav ul li a:hover::after{
 }
 
 .about-col-1{
-    flex-basis: 35%;
+    width: 35%;
 }
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
 }
 .about-col-2{
-    flex-basis: 60%;
+    width: 60%;
 }
 
 .tab-titles{
@@ -178,7 +178,7 @@ nav ul li a:hover::after{
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
+.tab-links:after{
     content: '';
     width: 0;
     height: 3px;
@@ -188,23 +188,20 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.5s;
 }
-
-.tab-links.active-link::after{
-    width: 50%;
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
+.tab-links.activelink:after{
+    width: 100%;
 }
 .tab-contents ul li span{
     color: #daa6ff;
     font-size: 14px;
 }
+.tab-contents ul li{
+    margin: 20px;
+}
 .tab-contents{
     display: none;
 }
-.tab-contents.active-tab{
+.tab-contents.activetab{
     display: block;
 }
 
@@ -219,7 +216,7 @@ nav ul li a:hover::after{
     padding: 30px 0;
     background-image: url(images/background.png)
 }
-.work-list{
+.portfolio-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
@@ -236,46 +233,52 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #DA8DFF);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-   transition: height 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
+.layover a{
+    margin-top: 40px;
     color: #DA8DFF;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
+    font-size: 20px;
+}
+.layover{
+    display: flex;
+    width: 1;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.8), #DA8DFF);
+    border-radius: 10px;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 20px;
+}
+.layover{
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+    transition: height 0.5s;
+    left: 0;
+    bottom: 0;
+}
+.layover a{
+    background: #ffffff;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     border-radius: 50%;
     text-align: center;
 }
+.layover h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
 .work:hover img{
     transform: scale(1.1);
 }
-.work:hover .layer{
+.work:hover .layover{
     height: 100%;
 }
+
 .btn{
     display: block;
     margin: 50px auto;
@@ -291,7 +294,7 @@ nav ul li a:hover::after{
     background: #DA8DFF;
 }
 
-/* ---------contact-------- */
+/* contact*/
 #contact{
     padding: 50px 0;}
 .contact-left{

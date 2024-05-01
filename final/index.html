@@ -53,11 +53,11 @@
                 <p>I’m a Berkeley Student admitted in Fall 2023, Intended to study Computer science and Cognitive science in order to pursue my interest in User Interface and User Experience design. </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links activelink" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
+                <div class="tab-contents activetab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>In the WDD decal, I am learning and designing Web/App interfaces for the term Spring 2024</li>
                         <li><span>Web Development</span><br>I find web developements very interesting as it can greatly contribute to companies' reputation by providing great user experiences</li>
@@ -86,11 +86,11 @@
 <!--portfolio-->
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
+        <h1 class="sub-title">My Portfolios</h1>
+        <div class="portfolio-list">
             <div class="work">
                 <img src="images/work-1.png">
-                <div class="layer">
+                <div class="layover">
                     <h3>'Homeadillos'</h3>
                     <p>In collaboration with Hyundai and RISD, a competition project where homeless can have their own portable shelter made from sustainable materials.</p>
                     <a href="https://portfolios.uwcsea.edu.sg/ma78348/2022/10/28/design-portfolio/"><i class="external-link"></i>more</a>
@@ -98,7 +98,7 @@
             </div>
             <div class="work">
                 <img src="images/work-2.png">
-                <div class="layer">
+                <div class="layover">
                     <h3>'Smarket'</h3>
                     <p>Theproduct I designed for helpers in singapore to carry many shopping bags at once.</p>
                     <a href="https://portfolios.uwcsea.edu.sg/ma78348/2022/10/28/design-portfolio/"><i class="external-link"></i>more</a>
@@ -106,7 +106,7 @@
             </div>
             <div class="work">
                 <img src="images/work-3.png">
-                <div class="layer">
+                <div class="layover">
                     <h3>Pedestrian Hat attachment</h3>
                     <p>I designed a hat attachment for pedectrians to be notified when cars/bicycles are coming up to them from behind to prevent accident.</p>
                     <a href="https://portfolios.uwcsea.edu.sg/ma78348/2022/10/28/design-portfolio/"><i class="external-link"></i>more</a>
@@ -149,15 +149,15 @@
 
     function opentab(tabname){
         for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+            tablink.classList.remove("activelink");
         }
         for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+            tabcontent.classList.remove("activetab");
         }
         //opentab recieves one element, (tabname), hide underline and hide info below(remove the active class name), do the same for tab contents.//
-        event.currentTarget.classList.add("active-link");
+        event.currentTarget.classList.add("activelink");
         //display the colour of the underline when clicked on//
-        document.getElementById(tabname).classList.add("active-tab");
+        document.getElementById(tabname).classList.add("activetab");
         //display the contents within the active tab//
 
     }
