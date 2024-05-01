@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'League Spartan', LeagueSpartan;
     box-sizing: border-box;
 }
@@ -106,32 +106,36 @@ nav{
 
 nav ul li{
     display: inline-block;
-    list-style: none;
     margin: 10px 20px;
 }
 
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     position: relative;
+    top: 10px;
 }
 nav ul li a:after{
     content: '';
+    background: #e6afeb;
     width: 0;
     height: 3px;
-    background: #e6afeb;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
 }
-nav ul li a:hover::after{
+nav ul li a:after{
+position: absolute;
+left: 0;
+bottom: -6px;
+transition: 0.5s;
+}
+nav ul li a:hover:after{
     width: 100%;
 }
 
 .logo{
     width: 140px;
+    position: relative;
+    margin-top: 15px;
 }
 
 .header-text{
@@ -171,24 +175,27 @@ nav ul li a:hover::after{
     display: flex;
     margin: 20px 0 40px;
 }
-.tab-links{
+.tablinks{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tab-links:after{
+.tablinks:after{
     content: '';
     width: 0;
     height: 3px;
-    background: #e3dbe7;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
+    background: #d366f8;
     transition: 0.5s;
 }
-.tab-links.activelink:after{
+.tablinks:after{
+position: absolute;
+left: 0;
+bottom: -8px;
+}
+
+.tablinks.activelink:after{
     width: 100%;
 }
 .tab-contents ul li span{
